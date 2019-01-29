@@ -3,15 +3,14 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Sidebar from "./sections/sidebar";
-import Preview from "./sections/preview";
+import Editor from "./sections/editor";
 import "./styles.css";
 import "./assets/style.scss";
-
 function App() {
   return (
     <div className="App">
       <div className="row">
-        <Preview />
+        <Editor />
         <Sidebar />
       </div>
     </div>

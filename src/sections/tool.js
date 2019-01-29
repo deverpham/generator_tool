@@ -1,8 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import Preview from "./preview";
+import emitter from '../emitter'
 class Tool extends React.Component {
-  getCode = () => {};
+  getCode = () => {
+    emitter.emit('GET_CODE', function(data) {
+      alert(data);
+    })
+  };
   render() {
     return (
       <div>
