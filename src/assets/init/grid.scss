@@ -1,0 +1,24 @@
+$grid: 12;
+$col-symbol: "col";
+$row-symbol: "row";
+.#{$row-symbol} {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.fill {
+  flex: 1;
+}
+@for $i from 1 to $grid {
+  .#{$col-symbol} {
+    &-#{$i} {
+      width: 100% / $grid * $i;
+      float: left;
+    }
+    &-r#{$i} {
+      margin-left: 100% / $grid * ($grid - $i);
+      float: right;
+    }
+  }
+}
